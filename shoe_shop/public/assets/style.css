@@ -1,0 +1,100 @@
+/* Layout & Sticky Footer */
+html, body { 
+    height: 100%; 
+}
+body { 
+    display: flex; 
+    flex-direction: column; 
+}
+.main-content { 
+    flex: 1 0 auto; 
+}
+footer { 
+    flex-shrink: 0; 
+}
+
+/* Navbar & Icons */
+.navbar-brand:hover { 
+    opacity: 0.8; 
+}
+.nav-icon-link { 
+    color: #6c757d; 
+    transition: color 0.2s; 
+}
+.nav-icon-link:hover { 
+    color: #0d6efd; 
+}
+.badge-notify { 
+    font-size: 0.6rem; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+}
+
+/* THANH TÌM KIẾM: Thu nhỏ và căn khớp mép trái sản phẩm */
+.search-container { 
+    position: relative; 
+    width: 45% !important;      /* Thu nhỏ hơn nữa để gọn gàng */
+    margin-left: 21% !important; /* Dịch qua trái để khớp hoàn toàn mép sản phẩm */
+    margin-right: auto !important;
+    display: block !important;
+} 
+
+#search-results { 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    right: 0; 
+    background: white; 
+    z-index: 9999 !important; /* Nổi trên bộ lọc giá */
+    border-radius: 0 0 8px 8px; 
+    max-height: 400px; 
+    overflow-y: auto; 
+    display: none; 
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Các mục gợi ý: Ảnh, Tên, Giá */
+.search-item { 
+    display: flex; 
+    align-items: center; 
+    padding: 10px 15px; 
+    border-bottom: 1px solid #f1f1f1; 
+    text-decoration: none !important; 
+    color: inherit;
+}
+.search-item:hover { 
+    background: #f8f9fa; 
+}
+.search-item img { 
+    width: 45px; 
+    height: 45px; 
+    object-fit: contain; 
+    margin-right: 15px; 
+}
+.search-item .name { 
+    font-weight: bold; 
+    font-size: 0.9rem; 
+    margin: 0; 
+    color: #333; 
+}
+.search-item .price { 
+    color: #dc3545; 
+    font-size: 0.85rem; 
+    font-weight: bold; 
+}
+
+/* Thẻ sản phẩm */
+.transition-all { 
+    transition: all 0.3s ease; 
+}
+.product-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1) !important; 
+}
+.btn-wishlist i:hover { 
+    transform: scale(1.2); 
+    transition: 0.2s; 
+    cursor: pointer; 
+}
